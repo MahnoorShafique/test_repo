@@ -20,10 +20,10 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
      
-      - name: Deploy to Server 1
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.HOST_DNS }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET_DIR }}
+      # - name: Deploy to Server 1
+      #   uses: easingthemes/ssh-deploy@main
+      #   env:
+      #     SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+      #     REMOTE_HOST: ${{ secrets.HOST_DNS }}
+      #     REMOTE_USER: ${{ secrets.USERNAME }}
+      #     TARGET: ${{ secrets.TARGET_DIR }}
