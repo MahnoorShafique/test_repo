@@ -30,7 +30,14 @@ jobs:
            TARGET: ${{ secrets.TARGET_DIR }}
            script: |
              cd /home/ubuntu/test
-             git clone git@github.com:MahnoorShafique/test_repo.git
+             git pull origin main
+             
+             
+             
+             
+             
+             
+             #git clone git@github.com:MahnoorShafique/test_repo.git
              # git pull origin main
             # echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
            # ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
