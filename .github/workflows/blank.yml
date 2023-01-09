@@ -29,7 +29,7 @@ jobs:
            USERNAME: ${{ secrets.USERNAME }}
            TARGET: ${{ secrets.TARGET_DIR }}
            script: |
-             cd /home/ubuntu/test
+             cd /home/ubuntu/test/test_repo
              git pull origin main
              
              
