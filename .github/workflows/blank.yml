@@ -13,26 +13,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+        - name: Run a one-line script
+          run: echo Hello, world!
 
-    #  - uses: actions/checkout@v2
+        - name: Deploy to Server 1
+          uses: appleboy/ssh-action@master
 
-      
-      - name: Run a one-line script
-        run: echo Hello, world!
-     
-      - name: Deploy to Server 1
-        uses: appleboy/ssh-action@master
-      - name: dddd
-        with:
+          with:
            KEY: ${{ secrets.EC2_SSH_KEY }}
            HOST: ${{ secrets.HOST_DNS }}
            USERNAME: ${{ secrets.USERNAME }}
            TARGET: ${{ secrets.TARGET_DIR }}
            script: |
              cd /home/ubuntu/test/test_repo
-             echo pwd
-             pwd
              git pull origin main
+
+    #  - uses: actions/checkout@v2
+
+
              
              
              
