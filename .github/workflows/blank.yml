@@ -22,7 +22,7 @@ jobs:
      
       - name: Deploy to Server 1
         uses: appleboy/ssh-action@master
-
+      - name: dddd
         with:
            KEY: ${{ secrets.EC2_SSH_KEY }}
            HOST: ${{ secrets.HOST_DNS }}
