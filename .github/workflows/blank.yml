@@ -30,6 +30,8 @@ jobs:
            TARGET: ${{ secrets.TARGET_DIR }}
            script: |
              cd /home/ubuntu/test/test_repo
+             echo pwd
+             pwd
              git pull origin main
              
              
